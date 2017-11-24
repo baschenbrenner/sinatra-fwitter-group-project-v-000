@@ -6,7 +6,7 @@ Welcome, <%=@user.username%>
 <br/>
 Create a New Tweet!
 <form method="POST" action="/tweets">
-  Content<input type="textbox" name="content" >
+  Content<input type="textarea" name="content" >
   <input type="submit" value="submit">
 </form>
 <a href="/logout">Logout</a>
