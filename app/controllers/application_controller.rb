@@ -123,6 +123,7 @@ class ApplicationController < Sinatra::Base
     @tweet = Tweet.find(params[:id])
     @tweet.content = params[:content]
     @tweet.save
+    redirect to '/tweets'
   end
   get '/tweets/:id/delete' do
     if User.is_logged_in?(session)
