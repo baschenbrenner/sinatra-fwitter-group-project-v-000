@@ -69,7 +69,7 @@ class ApplicationController < Sinatra::Base
    else
      erb :login
    end
-   
+
  end
 
  get '/logout' do
