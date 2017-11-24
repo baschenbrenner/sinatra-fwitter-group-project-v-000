@@ -89,5 +89,6 @@ class ApplicationController < Sinatra::Base
 
     post '/tweets' do
       Tweet.create(content: params[:content], user_id: session[:user_id])
+      redirect to '/show'
     end
 end
