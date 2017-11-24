@@ -80,13 +80,10 @@ class ApplicationController < Sinatra::Base
 
 
  get '/users/:slug' do
-   binding.pry
-       if User.is_logged_in?(session)
+  
         @user= User.find_by_slug( params[:slug])
         redirect to '/show'
-      else
-        redirect to '/login'
-      end
+      
     end
 
     post '/tweets' do
