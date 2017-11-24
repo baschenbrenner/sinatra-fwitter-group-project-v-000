@@ -110,4 +110,16 @@ class ApplicationController < Sinatra::Base
       redirect to '/login'
     end
   end
+
+  get '/tweets/:id/edit' do
+    if User.is_logged_in?(session)
+      erb :edit
+    else
+      redirect to '/login'
+    end
+  end
+
+  get '/tweets/:id/delete' do
+    
+  end
 end
