@@ -90,7 +90,7 @@ class ApplicationController < Sinatra::Base
       Tweet.create(content: params[:content], user_id: session[:user_id])
       redirect to '/show'
       else
-        redirect to '/tweets'
+        redirect to '/tweets/new'
     end
 
   get '/tweets/new' do
