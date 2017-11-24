@@ -3,6 +3,12 @@
 <br/>
 Welcome, <%=@user.username%>
 
+Here are all your tweets:
+
+<%@user.tweets.each do |tweet|%>
+<%=tweet.content%><br/>
+<%end%>
+
 <br/>
 Create a New Tweet!
 <form method="POST" action="/tweets">
