@@ -81,8 +81,8 @@ class ApplicationController < Sinatra::Base
 
  get '/users/:slug' do
       @user= User.find_by_slug( params[:slug])
-      redirect to '/show'
-      
+      erb :show
+
     end
 
     post '/tweets' do
