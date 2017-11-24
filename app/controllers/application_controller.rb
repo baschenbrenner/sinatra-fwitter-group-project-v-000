@@ -63,7 +63,7 @@ class ApplicationController < Sinatra::Base
 
  get '/tweets' do
    binding.pry
-   @user = User.find(params[:session][:user_id])
+   @user = User.find(session[:user_id])
    erb :tweets
  end
 
