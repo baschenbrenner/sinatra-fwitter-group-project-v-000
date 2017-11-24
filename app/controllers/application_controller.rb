@@ -64,7 +64,12 @@ class ApplicationController < Sinatra::Base
  get '/tweets' do
    binding.pry
    @user = User.find(session[:user_id])
-   erb :tweets
+   if @user.is_logged_in?(session)
+     erb :tweets
+   else
+     erb :login
+   end
+   
  end
 
  get '/logout' do
