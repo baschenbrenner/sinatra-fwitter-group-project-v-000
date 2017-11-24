@@ -89,4 +89,8 @@ class ApplicationController < Sinatra::Base
       Tweet.create(content: params[:content], user_id: session[:user_id])
       redirect to '/show'
     end
+
+  get '/tweets/new' do
+    erb :new
+  end  
 end
