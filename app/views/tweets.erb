@@ -1,6 +1,10 @@
 <%=session[:user_id]%>
 
-
+<br/>
 Welcome, <%=@user.username%>
 
+
+Create a New Tweet!
+<form method="POST" action="/tweets">
+  Content<input type="textbox" name="content">
 <a href="/logout">Logout</a>
