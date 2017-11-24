@@ -62,7 +62,7 @@ class ApplicationController < Sinatra::Base
  end
 
  get '/tweets' do
-   
+
    if User.is_logged_in?(session)
      @user = User.find(session[:user_id])
      erb :tweets
