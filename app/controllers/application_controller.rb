@@ -119,6 +119,11 @@ class ApplicationController < Sinatra::Base
     end
   end
 
+  post '/tweets/:id/edit' do
+    @tweet = Tweet.find(params[:id])
+    @tweet.content = params[:content]
+    @tweet.save
+  end
   get '/tweets/:id/delete' do
     if User.is_logged_in?(session)
       erb :delete
