@@ -95,6 +95,10 @@ class ApplicationController < Sinatra::Base
     end
 
   get '/tweets/new' do
+    if User.is_logged_in?(session)
     erb :new
+    else
+    redirect to '/login'
+    end
   end
 end
