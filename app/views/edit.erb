@@ -1,5 +1,7 @@
 Edit!
-
+<br/>
+Currently it says:
+<%=@tweet.content%>
 <form method="POST" action="/tweets/<%=@tweet.id%>/edit">
   <input type="hidden" name="_method" value="PATCH">
   Content<input type="text" name="content">
