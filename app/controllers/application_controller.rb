@@ -108,6 +108,6 @@ class ApplicationController < Sinatra::Base
       erb :tweet
     else
       redirect to '/login'
-      end
+    end
   end
 end
