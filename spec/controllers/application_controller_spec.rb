@@ -117,7 +117,6 @@ describe ApplicationController do
         :password => "kittens"
       }
       post '/login', params
-      
       get '/logout'
       expect(last_response.location).to include("/login")
     end
