@@ -91,6 +91,7 @@ class ApplicationController < Sinatra::Base
       redirect to '/show'
       else
         redirect to '/tweets/new'
+      end
     end
 
   get '/tweets/new' do
