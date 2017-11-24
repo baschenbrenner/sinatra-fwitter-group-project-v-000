@@ -92,5 +92,5 @@ class ApplicationController < Sinatra::Base
 
   get '/tweets/new' do
     erb :new
-  end  
+  end
 end
