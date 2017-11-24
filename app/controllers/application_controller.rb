@@ -79,10 +79,11 @@ class ApplicationController < Sinatra::Base
 
 
  get '/users/:slug' do
-   if User.is_logged_in?(session)
-    @user= User.find_by_slug( params[:slug])
-    redirect to '/show'
-  else
-    redirect to '/login'
-  end
+       if User.is_logged_in?(session)
+        @user= User.find_by_slug( params[:slug])
+        redirect to '/show'
+      else
+        redirect to '/login'
+      end
+    end
 end
