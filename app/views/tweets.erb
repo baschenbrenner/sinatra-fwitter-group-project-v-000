@@ -5,7 +5,7 @@ Welcome, <%=@user.username%>
 
 Here are all your tweets:
 
-<%@user.tweets.each do |tweet|%>
+<%Tweet.all.each do |tweet|%>
 <%=tweet.content%><br/>
 <%end%>
 
