@@ -137,8 +137,10 @@ class ApplicationController < Sinatra::Base
     binding.pry
     if User.is_logged_in?(session)
     @tweet = Tweet.find(params[:id])
-    @tweet.delete
-    redirect to '/tweets'
+      if @tweet.user_id == session[:user_id]
+        @tweet.delete
+        redirect to '/tweets'
+      end
     else
       redirect to '/tweets'
     end
