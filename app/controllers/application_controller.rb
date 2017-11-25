@@ -134,9 +134,12 @@ class ApplicationController < Sinatra::Base
 
 
   post '/tweets/:id/delete' do
+    if User.is_logged_in?(session)
     @tweet = Tweet.find(params[:id])
     @tweet.delete
-
     redirect to '/tweets'
+    else
+      redirect to '/tweets'
+    end
   end
 end
