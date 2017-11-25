@@ -120,7 +120,7 @@ class ApplicationController < Sinatra::Base
     end
   end
 
-  post '/tweets/:id/edit' do
+  patch '/tweets/:id/edit' do
     @tweet = Tweet.find(params[:id])
     @tweet.content = params[:content]
     @tweet.save
