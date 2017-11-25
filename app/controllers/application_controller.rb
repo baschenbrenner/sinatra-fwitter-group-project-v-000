@@ -133,7 +133,7 @@ class ApplicationController < Sinatra::Base
 
 
 
-  delete '/tweets/:id/delete' do
+  post '/tweets/:id/delete' do
     @tweet = Tweet.find(params[:id])
     @tweet.delete
 
