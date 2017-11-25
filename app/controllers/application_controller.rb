@@ -134,7 +134,7 @@ class ApplicationController < Sinatra::Base
 
 
   post '/tweets/:id/delete' do
-    binding.pry
+    
     if User.is_logged_in?(session)
     @tweet = Tweet.find(params[:id])
       if @tweet.user_id == session[:user_id]
