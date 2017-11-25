@@ -128,6 +128,7 @@ class ApplicationController < Sinatra::Base
     redirect to '/tweets'
     else
       redirect to "/tweets/#{params[:id]}/edit"
+    end
   end
 
   get '/tweets/:id/delete' do
